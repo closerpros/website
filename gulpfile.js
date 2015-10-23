@@ -39,7 +39,7 @@ function buildBundle(b) {
             .pipe(notify('JS Bundled Successfully!'));
 }
 
-gulp.task('build-js', [], function() {
+gulp.task('build-js', function() {
     var b = browserify(); //{debug: true, cache: {}, packageCache: {}});
     // b.transform(browserifyShim);
     b = watchify(b);
@@ -72,7 +72,6 @@ gulp.task('harp-compile', function(done) {
 /**
 * Push the site to GH Pages
 */
-gulp.task('deploy', function(done) {
-    gulp.src(paths.dist + '/**/*')
-      .pipe(ghpages());
+gulp.task('deploy', function() {
+    gulp.src(paths.dist + '/**/*').pipe(ghpages());
 });
