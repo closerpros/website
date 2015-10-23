@@ -1,0 +1,1 @@
+We do not currently services agents outside of Keller Williams. We find value in servicing Keller Williams only. We are very knowledgable with the systems that allow us to serve you best.

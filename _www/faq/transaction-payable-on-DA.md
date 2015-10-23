@@ -1,0 +1,1 @@
+All transactions are paid on the DA. We treat it as a transaction fee paid straight to Closer Pros so you will also not have to worry about remembering to write a check. **If the deal does not close, Closer Pros does not get paid.**

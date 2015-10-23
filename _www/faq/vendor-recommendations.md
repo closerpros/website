@@ -1,0 +1,1 @@
+Closer Pros has a very selective list of vendors. We have established strong working relationships with these contractors and would love for your client to share that experience. If you have a list you prefer us to use, please let us know so we have that on file.

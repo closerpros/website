@@ -1,0 +1,131 @@
+// Your styles here!
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.form-icon {
+    font-size: 140px;
+}
+
+.cover-header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.cover-header a {
+	color: white;
+  :hover {
+    color: $gray-light;
+  }
+}
+
+.jumbotron {
+  height: 60%;
+}
+
+.center-row {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  align-items: center;
+  -webkit-justify-content: center ;
+  -webkit-align-items: center;
+  justify-content: center;
+}
+
+.outer-box {
+  @media(max-width: $screen-sm-min) {
+    padding: 0 30px;
+  }
+}
+
+.white-box {
+    padding: 15px;
+    border: 1px solid #6E93AD;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.row-flex, .row-flex > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+  -webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+   margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+  width:100%;
+}
+
+.text-brand {
+  color: $brand-primary;
+}
+.text-brand-warning {
+  color: $brand-warning;
+}
+.text-brand-info {
+  color: $brand-info;
+}
+
+.agency-container {
+  background-color: $gray;
+  color: #FFF;
+}
+
+.has-feedback .form-control {
+  padding: inherit;
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  padding: 0px 15px;
+  position: absolute;
+  bottom: 0;
+  letter-spacing: 0;
+  > div {
+    align-items: baseline;
+  }
+  a {
+    color: black;
+  }
+}
+.footer hr {
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+.footer-heading {
+  font-family: $headings-font-family;
+  color: #000000;
+}
+.footer-address {
+  color: $gray-base;
+  font-weight: 200;
+  @media(min-width: ($screen-md + 200px)) {
+    white-space: nowrap;
+  }
+}
+.footer-apply {
+  @media(min-width: ($screen-sm + 60px)) {
+    white-space: nowrap;
+  }
+}

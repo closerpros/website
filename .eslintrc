@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": 1,
+    "node": 1
+  },
+
+  "globals": {
+    "jQuery": 1,
+    "$": 1
+  },
+
+  "rules": {
+    "quotes": [2, "single"],
+    "no-console": 0,
+    "strict": 0
+  }
+}

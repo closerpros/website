@@ -1,0 +1,15 @@
+{
+  "index": {
+    "title": "CloserPros | Professional Real Estate Contract to Close Services"
+  },
+  "404": {
+    "title": "CloserPros | File Not Found",
+    "layout": "_shared/_basic_layout"
+  },
+  "sitemap": {
+    "layout": false
+  },
+  "robots": {
+    "layout": false
+  }
+}

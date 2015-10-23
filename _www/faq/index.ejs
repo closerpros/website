@@ -1,0 +1,10 @@
+<div class="container">
+<ul>
+<% for(var slug in public.faq._data){ %>
+  <% if(slug !== 'index'){ %>
+    <li><a href="/faq/<%= slug %>"><%= public.faq._data[slug].title %></a></li>
+    <div><%- partial(slug) %></div>
+  <% }; %>
+<% }; %>
+</ul>
+</div>

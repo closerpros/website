@@ -1,0 +1,27 @@
+<footer class="footer">
+  <% if (footerHR) { %><hr><% } %>
+  <div class="row center-row">
+    <span class="footer-address col-xs-4 text-left">
+      <span class="text-uppercase footer-heading">Contact Us</span>
+      <br class="visible-xs visible-sm"/>
+      <nobr>1801 S. Mo-Pac <span class="hidden-xs">Expressway</span></nobr>
+      <nobr>Suite 100</nobr>
+      <nobr>Austin, Texas 78746</nobr>
+    </span>
+    <span class="footer-questions col-xs-4 text-center">
+      <span class="text-uppercase footer-heading">Questions?</span>
+      <br class="visible-xs visible-sm"/>
+      <a href="tel:1.888.620.0163">(888) 620-0163</a>
+    </span>
+    <span class="footer-heading footer-apply text-uppercase col-xs-4 text-right">
+      Fastest growing closing services <br class="visible-xs visible-sm"/> 
+    </span>
+  </div>
+</footer>
+<!-- Since we are showing IE 9 and below users to the door...we can use the fancy defer tag
+     The defer tag will make the browser asynchronously download while continuing to parse the page
+     It won't execute it until after it finishes parsing the page, and then execute all the JavaScript that had a defer tag in the order that it appeared in the page.
+-->
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script defer type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script defer type="text/javascript" src="/js/bundle.js"></script>

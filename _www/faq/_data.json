@@ -1,0 +1,62 @@
+{
+  "index": {
+    "title": "CloserPros FAQ",
+    "layout": "_index_layout"
+  },
+  "eligible-clients": {
+    "title": "Does Closer Pros service agents outside of Keller Williams?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-20",
+    "type": "article",
+    "freq": "monthly"
+  },
+  "document-submission": {
+    "title": "Does Closer Pros know how to use Dotloop?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-20",
+    "type": "article",
+    "freq": "monthly"
+  },
+  "transaction-payable-on-DA": {
+    "title": "Is payment due at closing, or before you take the contract?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-21",
+    "type": "article",
+    "freq": "monthly"
+  },
+  "onboarding": {
+    "title": "How do I get set up to work with Closer Pros?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-20",
+    "type": "article",
+    "freq": "monthly"
+  },
+  "client-representation": {
+    "title": "How do you represent me when you call?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-20",
+    "type": "article",
+    "freq": "monthly"
+  },
+  "underperforming-closer": {
+    "title": "What if I feel my Closer Pro is underperforming?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-20",
+    "type": "article",
+    "freq": "monthly"
+  },
+  "listing-management": {
+    "title": "Do you plan to do listing management in the future?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-20",
+    "type": "article",
+    "freq": "monthly"
+  },
+  "vendor-recommendations": {
+    "title": "Do you supply recommended vendors to my client?",
+    "author": "CloserPros Helpdesk",
+    "date": "2015-10-20",
+    "type": "article",
+    "freq": "monthly"
+  }
+}

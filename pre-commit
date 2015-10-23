@@ -1,0 +1,88 @@
+# Extract staged files to a temp directory
+export NODE_MODULES=$(npm run -s pre-lint)
+export JSCS_PATH=`echo $NODE_MODULES"/jscs/bin/jscs"`
+export ESLINT_PATH=`echo $NODE_MODULES"/eslint/bin/eslint.js"`
+TMPDIR=
+TMPFILE=
+if [ "$IS_LINUX" == "true" ]; then
+    TMPFILE=`mktemp jscs_tmp_XXXXXX`
+    TMPDIR=`mktemp -d jscs_tmp_XXXXXX`
+else
+    TMPFILE=`mktemp -t tmp/jscs_tmp_XXXXXX`
+    TMPDIR=`mktemp -t tmp/jscs_tmp -d`
+fi
+JSFILES=$(git diff-index --name-status --cached HEAD | grep -v ^D | egrep '\.js$' | cut -c3-)
+fix=`$JSCS_PATH -x -s esprima -r text $JSFILES`
+
+if [[ "$JSFILES" = "" ]]; then
+    echo "no js files found..."
+    exit 0
+fi
+PASS=true
+for FILE in $JSFILES
+do
+  echo $ESLINT_PATH $FILE
+  $ESLINT_PATH "$FILE"
+
+  if [[ "$?" == 0 ]]; then
+    echo "\t\033[32mESLint Passed: $FILE\033[0m"
+  else
+    echo "\t\033[41mESLint Failed: $FILE\033[0m"
+    PASS=false
+  fi
+done
+
+if ! $PASS; then
+  echo "\033[41mCOMMIT FAILED:\033[0m Your commit contains files that should pass ESLint but do not. Please fix the ESLint errors and try again.\n"
+  exit 1
+else
+  echo "\033[42mESLINT SUCCEEDED\033[0m\n"
+fi
+
+git diff --cached --name-only --diff-filter=ACMR | xargs git checkout-index --prefix=$TMPDIR/ --
+# Check JavaScript code style
+RUN_JSCS=1
+TOTAL_ERRORS=0
+
+if [ -z "$JSFILES" ]; then
+    # No JavaScript file changed for this commit
+    RUN_JSCS=0
+elif [ -z "$JSCS_PATH" ]; then
+    echo "Warning: You can't check the JS coding style."
+    echo "You need to download and install jscs and set JSCS_PATH to its path."
+    RUN_JSCS=0
+fi
+
+# Ensuring proper coding style
+if [ $RUN_JSCS -ne 0 ]; then
+    echo -n "Checking JS style errors..."
+    OUT=`$JSCS_PATH -s esprima -r text $TMPDIR`
+    CODE=$?
+    # Erase last output line
+    echo -ne '\r\033[K'
+    if [ $CODE -ne 0 ]; then
+        # Replace temp file name with real filename with color
+        # in sed we use commas as separators for clarity, and execute echo
+        # in the replacement part to get colors
+        # Probably cleaner ways exist but I don't know them at the moment
+        OUT=`echo -e "$OUT" | sed "s,$TMPDIR/\([^ ]*\),\`echo -e \"\033[1;32m\1\033[0m\"\`,"`
+
+        # grab the number of errors for that file
+        # (keeps only numbers and takes the last line)
+        TOTAL_ERRORS=`echo -e "$OUT" | sed 's/[^0-9]//g' | tail -1`
+
+        # echo output minus last line
+        echo -e "\033[1;37mJavaScript style errors found:\033[0m"
+        echo -e "$OUT" | sed '$ d'
+
+        echo "$TOTAL_ERRORS code style errors found."
+        echo "Please fix and stage the files before commiting again."
+        rm -Rf $TMPDIR $TMPFILE
+        exit $CODE
+    else
+        echo "No JS code style errors found."
+    fi
+fi
+
+# Clean up
+rm -Rf $TMPDIR $TMPFILE

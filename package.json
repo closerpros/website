@@ -1,0 +1,49 @@
+{
+  "name": "closerpro",
+  "version": "0.0.1",
+  "description": "CloserPros website for Heyl Real Estate",
+  "scripts": {
+    "pre-lint": "(cd \"./node_modules/\" && pwd)",
+    "preinstall": "npm prune",
+    "postinstall": "rsync pre-commit .git/hooks && chmod 755 .git/hooks/pre-commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/closerpros/website.git"
+  },
+  "browserify-shim": {
+    "jquery": "global:jquery",
+    "bootstrap": "global:bootstrap"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./libs/jquery-shim.js", 
+    "jquery.cookie": "./libs/jquery.cookie.js",
+    "validator": "./libs/validator.js"
+  },
+  "author": "Ryan Floyd",
+  "homepage": "https://github.com/closerpros/website",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "browserify-shim": "^3.8.10",
+    "del": "^1.2.0",
+    "eslint": "^0.24.1",
+    "eslint-config-defaults": "^3.1.0",
+    "gulp": "^3.8.11",
+    "gulp-clean": "^0.3.1",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-notify": "^2.2.0",
+    "harp": "^0.19.0",
+    "jasmine": "^2.3.1",
+    "jscs": "^1.13.1",
+    "uglifyify": "^3.0.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.0"
+  }
+}

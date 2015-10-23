@@ -1,0 +1,9 @@
+{
+  "globals": {
+    "site": "CloserPros",
+    "description": "Professional Real Estate Contract to Close Services",
+    "type": "website",
+    "url": "http://localhost:9000",
+    "default_logo": "http://www.closerpros.com/img/logo.png"
+  }
+}

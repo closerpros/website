@@ -1,0 +1,1 @@
+Yes, all of our document submission is done through Dotloop. You will no longer have to manage your loop to ensure your DA gets created in time.

@@ -1,0 +1,8 @@
+// Background images
+//
+@mixin bg-img($name, $x: center, $y: center, $repeat: no-repeat, $size: cover, $image-path: $image-path){
+  background-image: url(#{$image-path}/#{$name});
+  background-position: $x $y;
+  background-size: $size;
+  background-repeat: $repeat;
+}
