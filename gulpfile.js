@@ -72,6 +72,6 @@ gulp.task('harp-compile', function(done) {
 /**
 * Push the site to GH Pages
 */
-gulp.task('deploy', function() {
-    gulp.src(paths.dist + '/**/*').pipe(ghpages());
+gulp.task('deploy', function(done) {
+    return gulp.src(paths.dist + '/**/*').pipe(ghpages(done));
 });
