@@ -1,2 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset> 
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+    <loc>http://www.closerpros.com/</loc>
+    <changefreq>daily</changefreq>
+    <lastmod>2015-10-24T23:37:02.712Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/client-representation</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-20T00:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/document-submission</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-20T00:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/eligible-clients</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-20T00:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/</loc>
+    <changefreq>daily</changefreq>
+    <lastmod>2015-10-24T23:37:02.713Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/listing-management</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-20T00:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/onboarding</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-20T00:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/transaction-payable-on-DA</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-21T00:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/underperforming-closer</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-20T00:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://www.closerpros.com/faq/vendor-recommendations</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2015-10-20T00:00:00.000Z</lastmod>
+</url>
+</urlset> 

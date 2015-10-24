@@ -9,7 +9,7 @@ var uglifyify = require('uglifyify');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 var harp = require('harp');
-var ghpages = require('gulp-gh-pages');
+var subtree = require('gulp-subtree');
 
 var paths = require('./gulp-paths.js');
 
@@ -65,13 +65,19 @@ gulp.task('serve', function(done) {
 /**
  * Build the Harp Site
  */
-gulp.task('harp-compile', function(done) {
-    harp.compile(paths.source, '../' + paths.dist, done);
+gulp.task('harp-compile', ['build-js'], function(done) {
+    return harp.compile(paths.source, '../' + paths.dist, done);
 });
 
 /**
 * Push the site to GH Pages
 */
-gulp.task('deploy', function() {
-    return gulp.src(paths.dist + '/**/*').pipe(ghpages({force: true}));
+gulp.task('deploy', ['harp-compile'], function() {
+    return gulp.src(paths.dist + '/**/*')
+    .pipe(subtree({
+      remote: 'upstream',
+      branch: 'gh-pages',
+      message: 'Deploying dist to gh-pages'
+    }))
+    .pipe(clean([paths.dist]));
 });
