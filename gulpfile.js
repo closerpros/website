@@ -72,12 +72,7 @@ gulp.task('harp-compile', ['build-js'], function(done) {
 /**
 * Push the site to GH Pages
 */
-gulp.task('deploy', ['harp-compile'], function() {
-    return gulp.src(paths.dist + '/**/*')
-    .pipe(subtree({
-      remote: 'upstream',
-      branch: 'gh-pages',
-      message: 'Deploying dist to gh-pages'
-    }))
-    .pipe(clean([paths.dist]));
+gulp.task('deploy', ['harp-compile'], function(done) {
+    return gulp.src(paths.dist)
+    .pipe(subtree());
 });
