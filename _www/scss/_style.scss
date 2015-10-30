@@ -37,6 +37,10 @@ html {
   justify-content: center;
 }
 
+.center-img {
+  margin: 0 auto;
+}
+
 .outer-box {
   @media(max-width: $screen-sm-min) {
     padding: 0 30px;
@@ -127,5 +131,12 @@ html {
 .footer-apply {
   @media(min-width: ($screen-sm + 60px)) {
     white-space: nowrap;
+  }
+}
+
+.contact-us {
+  input {
+    min-height: 28px;
+    width: 100%;
   }
 }

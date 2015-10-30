@@ -2,6 +2,9 @@
   "index": {
     "title": "CloserPros | Professional Real Estate Contract to Close Services"
   },
+  "packages": {
+    "title": "CloserPros | Packages and Pricing"
+  },
   "404": {
     "title": "CloserPros | File Not Found",
     "layout": "_shared/_basic_layout"
