@@ -33,7 +33,4 @@ function s(o, u) {
     }
 }, 400);
 
-    // Fix the damn lopsided wufoo name field
-    $('#Field2').attr('size', '8');
-
 }, {}]}, {}, [1]);
