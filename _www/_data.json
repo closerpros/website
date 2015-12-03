@@ -1,12 +1,15 @@
 {
   "index": {
-    "title": "CloserPros | Professional Real Estate Contract to Close Services"
+    "title": "CloserPros | Professional Real Estate Contract to Close Services",
+    "footerHR": false
   },
   "packages": {
-    "title": "CloserPros | Packages and Pricing"
+    "title": "CloserPros | Packages and Pricing",
+    "footerHR": true
   },
   "404": {
     "title": "CloserPros | File Not Found",
+    "footerHR": false,
     "layout": "_shared/_basic_layout"
   },
   "sitemap": {
