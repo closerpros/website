@@ -150,3 +150,33 @@ html {
 .contact-us .submit {
   max-width: 200px;
 }
+
+.packages .flyer {
+  margin-bottom: 20px;
+}
+
+.packages .price {
+  max-width: 120px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.package-list li {
+  font-size: 16px;
+  @media(min-width: $screen-sm) {
+    font-size: 20px;
+  }
+  @media(min-width: $screen-md) {
+    font-size: 24px;
+  }
+}
+
+.packages h2 {
+  font-size: 20px;
+  @media(min-width: $screen-sm) {
+    font-size: 24px;
+  }
+  @media(min-width: $screen-md) {
+    font-size: 30px;
+  }
+}
