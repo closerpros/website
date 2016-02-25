@@ -8,7 +8,7 @@
   padding-bottom: $jumbotron-padding;
   margin-bottom: $jumbotron-padding;
   color: $jumbotron-color;
-  @include bg-img('/closerpros.github.io/website/img/hero.jpg', center, top);
+  @include bg-img('/closerpros.github.io/img/hero.jpg', center, top);
 
   h1,
   .h1 {

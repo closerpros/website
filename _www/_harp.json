@@ -3,7 +3,7 @@
     "site": "CloserPros",
     "description": "Professional Real Estate Contract to Close Services",
     "type": "website",
-    "url": "http://closerpros.github.io/website",
-    "default_logo": "http://closerpros.github.io/website/img/logo.png"
+    "url": "https://closerpros.github.io",
+    "default_logo": "https://closerpros.github.io/img/logo.png"
   }
 }
